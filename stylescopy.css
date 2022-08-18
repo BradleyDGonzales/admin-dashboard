@@ -1,0 +1,121 @@
+/* @font-face {
+    font-family: 'shockwaveregular';
+    src: url('fonts/shockwaveregular/shockwave.regular-webfont.woff2') format('woff2'),
+         url('fonts/shockwaveregular/shockwave.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'balsamregular';
+    src: url('fonts/balsam/balsam-webfont.woff2') format('woff2'),
+         url('fonts/balsam/balsam-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --iconImage: url(icons/shyseus.png)
+}
+p,h1,input[type=text] {
+    font-family: 'balsamregular',Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: 0.18fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.sidebar {
+    background-color: #27272a;
+    padding-left: 12px;
+    padding-top: 32px;
+    min-height: 100vh;
+    
+}
+.logo {
+    display: grid;
+    grid-auto-flow: column;
+    width: fit-content;
+    gap: 10px;
+}
+.logo h1 {
+    display: grid;
+    color: white;
+    font-size: 1.4em;
+    align-items: center;
+}
+.section1,
+.section2 {
+    color: white;
+    font-weight: 900;
+}
+.section2 {
+    padding-top: 32px;
+}
+.section1 img,
+.section2 img {
+    position: relative;
+    left: 12px;
+}
+.section1 p,
+.section1 img,
+.section2 p,
+.section2 img {
+    margin-top: 32px;
+}
+input[type=text] {
+    border: none;
+    background-color: #e5e5e5;
+    border-radius: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+input[type=text]:focus {
+    outline-color: #27272a;
+}
+.main-header {
+    display: grid;
+    grid-template-columns: 7fr 0.2fr 0.2fr;
+    padding-top: 24px;
+    gap: 32px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar {
+    display: grid;
+    grid-auto-flow: column;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 32px;
+    border: 2px solid red;
+}
+.userinfo-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center ;
+    height: fit-content;
+}
+.userinfo.name {
+    font-family: 'shockwaveregular', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+.welcome-nav {
+    grid-row: 3;
+}
+*/
