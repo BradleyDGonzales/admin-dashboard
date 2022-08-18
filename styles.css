@@ -1,14 +1,15 @@
 @font-face {
     font-family: 'shockwaveregular';
     src: url('fonts/shockwaveregular/shockwave.regular-webfont.woff2') format('woff2'),
-         url('fonts/shockwaveregular/shockwave.regular-webfont.woff') format('woff');
+        url('fonts/shockwaveregular/shockwave.regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'balsamregular';
     src: url('fonts/balsam/balsam-webfont.woff2') format('woff2'),
-         url('fonts/balsam/balsam-webfont.woff') format('woff');
+        url('fonts/balsam/balsam-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,62 +17,79 @@
 :root {
     --iconImage: url(icons/shyseus.png)
 }
-p,h1,h2,h3,h4,input[type=text] {
-    font-family: 'balsamregular',Arial, Helvetica, sans-serif;
+
+p,
+h1,
+h2,
+h3,
+h4,
+input[type=text] {
+    font-family: 'balsamregular', Arial, Helvetica, sans-serif;
 }
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 ul li {
     list-style-type: none;
     display: flex;
     gap: 2em;
     align-items: center;
 }
+
 .container {
     display: grid;
     grid-template-columns: 0.18fr 1fr;
 }
+
 .sidebar {
     background-color: #27272a;
     padding-left: 12px;
     padding-top: 32px;
     min-height: 100vh;
-    
+
 }
+
 .logo {
     display: grid;
     grid-auto-flow: column;
     width: fit-content;
     gap: 10px;
 }
+
 .logo h1 {
     display: grid;
     color: white;
     font-size: 1.4em;
     align-items: center;
 }
+
 .section1,
 .section2 {
     color: white;
     font-weight: 900;
 }
+
 .section2 {
     padding-top: 32px;
 }
+
 .section1 img,
 .section2 img {
     position: relative;
     left: 12px;
 }
+
 .section1 p,
 .section1 img,
 .section2 p,
 .section2 img {
     margin-top: 32px;
 }
+
 input[type=text] {
     border: none;
     background-color: #e5e5e5;
@@ -81,9 +99,11 @@ input[type=text] {
     padding-top: 6px;
     padding-bottom: 6px;
 }
+
 input[type=text]:focus {
     outline-color: #27272a;
 }
+
 .content {
     display: grid;
     grid-template-columns: 7fr 1fr;
@@ -97,6 +117,7 @@ input[type=text]:focus {
     padding-bottom: 16px;
 
 }
+
 .searchbar {
     display: grid;
     height: fit-content;
@@ -106,19 +127,22 @@ input[type=text]:focus {
     align-items: center;
     padding-left: 32px;
 }
+
 .userinfo-container {
     display: flex;
     gap: 58px;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     height: fit-content;
     padding-right: 64px;
 
 }
+
 .userinfo.name {
     font-family: 'shockwaveregular', Arial, Helvetica, sans-serif;
     font-size: 28px;
 }
+
 .welcome-nav {
     display: grid;
     grid-column: 1 / span 2;
@@ -130,6 +154,7 @@ input[type=text]:focus {
     align-items: center;
 
 }
+
 .buttons {
     display: grid;
     column-gap: 32px;
@@ -137,6 +162,7 @@ input[type=text]:focus {
     justify-content: space-between;
     padding-right: 64px;
 }
+
 .buttons button {
     background-color: #27272a;
     color: #e5e5e5;
@@ -145,8 +171,45 @@ input[type=text]:focus {
     width: 90px;
     height: 45px;
 }
+
 .main {
     grid-row: 3;
     grid-column: 1 / span 2;
     box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+    padding-top: 32px;
+    padding-left: 32px;
+    background-color: #f3f4f6;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 32px;
+}
+.project {
+    display: grid;
+    grid-template-rows: 0.3fr 0.3fr;
+    background-color: white;
+    border-radius: 10px;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #27272a;
+    padding: 32px;
+    column-gap: 32px;
+
+}
+.caption {
+    padding-top: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.project-icons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-row-start: 4;
+    justify-content: flex-end;
+    gap: 24px;
+    align-items: center;
+    
+
 }
