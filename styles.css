@@ -1,3 +1,10 @@
+/*
+
+
+need to fix background color not stretching all the way down, but its finished!
+
+*/
+
 @font-face {
     font-family: 'shockwaveregular';
     src: url('fonts/shockwaveregular/shockwave.regular-webfont.woff2') format('woff2'),
@@ -40,10 +47,6 @@ ul li {
     display: flex;
     gap: 2em;
     align-items: center;
-}
-
-body {
-    overflow: hidden;
 }
 
 .container {
@@ -178,24 +181,28 @@ input[type=text]:focus {
 
 .main {
     display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-rows: 0.1fr;
     grid-row: 3 / 4;
     grid-column: 1 / span 3;
     box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
     padding-top: 32px;
     padding-left: 32px;
+    padding-bottom: 32px;
     background-color: #f3f4f6;
-    padding-bottom: 164px;
 }
 
 .title {
     padding-bottom: 16px;
     width: fit-content;
     grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 .projects-container {
     display: grid;
-    grid-row-start: 2;
+    grid-row-start: 1;
+    grid-column-start: 1;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     column-gap: 32px;
@@ -218,6 +225,21 @@ input[type=text]:focus {
 
 }
 
+.project.one,
+.project.two {
+    grid-row-start: 2;
+}
+
+.project.three,
+.project.four {
+    grid-row-start: 3;
+}
+
+.project.five,
+.project.six {
+    grid-row-start: 4;
+}
+
 .caption {
     padding-top: 8px;
     font-family: 'Courier New', Courier, monospace;
@@ -231,20 +253,23 @@ input[type=text]:focus {
     gap: 15px;
     grid-row-start: 3;
 }
-.extras-title {
-    border: 2px solid red;
+
+.extras-wrapper {
+    grid-row-start: 1;
 }
+
 .extras-title.trending {
     grid-column-start: 1;
     height: fit-content;
 }
+
 .extras-title.announcements {
     padding-bottom: 16px;
     width: fit-content;
     grid-row-start: 1;
 }
 
-.card {
+.card.announcements {
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 0.1fr;
     row-gap: 8px;
@@ -254,7 +279,7 @@ input[type=text]:focus {
     grid-row-start: 2;
     background-color: white;
     border-radius: 10px;
-    padding: 32px;
+    padding: 24px;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -273,4 +298,30 @@ input[type=text]:focus {
     border-bottom: none;
 }
 
-/*     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75); for later use */
+.extras-title.trending {
+    height: fit-content;
+    width: fit-content;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.card.trending {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+    row-gap: 8px;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    grid-row-start: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    column-gap: 16px;
+}
